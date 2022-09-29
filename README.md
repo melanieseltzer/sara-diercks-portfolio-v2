@@ -4,12 +4,10 @@
 
 Live url: https://saradiercks.com
 
-Showcasing projects from UCLA Extension's GIS and Geospatial Technology certificate program. Built using Next.js and powered by GraphCMS for the backend.
+Showcasing projects from UCLA Extension's GIS and Geospatial Technology certificate program. Built using Next.js and powered by Hygraph CMS.
 
 ## Built With ❤️
 
 - [Next.js](https://nextjs.org)
-- [GraphCMS](https://graphcms.com/)
+- [Hygraph](https://hygraph.com/)
 - [Tailwind](https://tailwindcss.com/)
-
-<a href="https://graphcms.com" target="_blank"><img src="https://storage.googleapis.com/graphcms-public/powered_by_graphcms.svg"></a>
