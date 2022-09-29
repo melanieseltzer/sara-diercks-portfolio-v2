@@ -1,11 +1,7 @@
 export default function Index({ posts }) {
-  console.log(posts)
+  console.log(posts);
 
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
 }
 
 export async function getStaticProps() {
@@ -13,5 +9,5 @@ export async function getStaticProps() {
 
   return {
     props: { posts: {} },
-  }
+  };
 }

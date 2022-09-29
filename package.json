@@ -1,9 +1,22 @@
 {
+  "name": "sara-diercks-portfolio",
   "private": true,
+  "author": "Melanie Seltzer <melanieseltzer1@gmail.com>",
+  "description": "GIS portfolio for Sara Diercks",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanieseltzer/saradiercks.com.git"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint --cache --ext .js,.ts,.tsx,.mdx .",
+    "lint:fix": "yarn lint --fix",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "format": "yarn format:fix && yarn lint:fix"
   },
   "dependencies": {
     "next": "^12.3.1",
@@ -11,8 +24,15 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@mels/eslint-config-base": "^1.0.1",
+    "@mels/eslint-config-prettier": "^1.0.0",
+    "@mels/eslint-config-react": "^1.0.0",
+    "@mels/prettier-config": "^1.0.0",
     "autoprefixer": "^10.4.12",
+    "eslint": "^8.23.0",
+    "eslint-config-next": "^12.3.1",
     "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
     "tailwindcss": "^3.1.8"
   }
 }
