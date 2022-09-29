@@ -1,19 +1,21 @@
 import Markdown from 'react-markdown';
+import Image from 'next/image';
 import prettyBytes from 'pretty-bytes';
 
 import { Tag } from '../Tag';
 
 export const Project = ({ project }) => (
   <div>
-    {/* Project doesn't have to have a thumbnail */}
-    {/* {project.thumbnail && (
-        <img
-          image={project.thumbnail}
-          alt={project.title}
-          maxWidth={730}
-          withWebp
-        />
-      )} */}
+    {project.thumbnail && (
+      <Image
+        src={project.thumbnail.url}
+        alt={project.title}
+        layout="responsive"
+        width={project.thumbnail.width}
+        height={project.thumbnail.height}
+      />
+    )}
+
     <h3>
       {project.title} {project.finalProject && <Tag>Final Project</Tag>}
     </h3>
