@@ -6,6 +6,7 @@ import {
   getContactSectionContent,
   getProjects,
 } from '../../lib/data';
+import { Intro } from '../components/Intro';
 import { Projects } from '../components/Projects';
 import { Section } from '../components/Section';
 import { HomepageLayout } from '../layouts/HomepageLayout';
@@ -13,6 +14,8 @@ import { HomepageLayout } from '../layouts/HomepageLayout';
 export default function Index({ projects, about, contact }) {
   return (
     <HomepageLayout>
+      <Intro />
+
       <Projects projects={projects} />
 
       <Section title="About">

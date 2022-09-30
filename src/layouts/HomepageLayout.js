@@ -8,7 +8,7 @@ export const HomepageLayout = ({ children }) => (
 
     <Header />
 
-    <main className={`px-4 xl:px-0 max-w-5xl mx-auto`}>{children}</main>
+    <main className="space-y-4">{children}</main>
 
     <Footer />
   </>

@@ -1,7 +1,11 @@
+import { MaxWidthContainer } from '../MaxWidthContainer';
+
 export const Section = ({ title, children }) => (
-  <section>
-    <h2>{title}</h2>
+  <MaxWidthContainer as="section">
+    <h2 className="text-gray-900 mb-6 text-2xl sm:text-3xl font-extrabold tracking-tight">
+      {title}
+    </h2>
 
     {children}
-  </section>
+  </MaxWidthContainer>
 );

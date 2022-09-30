@@ -20,12 +20,12 @@ const routes = [
 ];
 
 export const Nav = () => (
-  <nav className="text-base font-medium text-gray-900 mx-auto w-full sm:w-auto sm:m-0">
+  <nav className="text-base font-medium text-gray-600">
     <ul className="flex justify-center space-x-8">
       {routes.map(route => (
         <li key={route.name}>
           <Link
-            className="hover:text-sky-600"
+            className="hover:text-cyan-500"
             href={route.path}
             {...(route.name === 'Resume' && { target: '_blank' })}
           >
