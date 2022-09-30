@@ -1,11 +1,10 @@
-import Link from 'next/link';
+import { Link } from '../Link';
 
 export const Logo = () => (
-  <h1>
-    <Link href="/" passHref>
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <a>Sara Diercks</a>
-    </Link>
-    <span /> {/* fancy border thingy */}
-  </h1>
+  <Link
+    href="/"
+    className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+  >
+    Sara Diercks
+  </Link>
 );

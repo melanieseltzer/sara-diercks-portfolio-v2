@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '../Link';
 
 const routes = [
   {
@@ -20,15 +20,16 @@ const routes = [
 ];
 
 export const Nav = () => (
-  <nav>
-    <ul>
+  <nav className="text-base font-medium text-gray-900 mx-auto w-full sm:w-auto sm:m-0">
+    <ul className="flex justify-center space-x-8">
       {routes.map(route => (
         <li key={route.name}>
-          <Link href={route.path} passHref>
-            {/* Resume needs to be opened in new tab */}
-            <a {...(route.name === 'Resume' && { target: '_blank' })}>
-              {route.name}
-            </a>
+          <Link
+            className="hover:text-sky-600"
+            href={route.path}
+            {...(route.name === 'Resume' && { target: '_blank' })}
+          >
+            {route.name}
           </Link>
         </li>
       ))}
