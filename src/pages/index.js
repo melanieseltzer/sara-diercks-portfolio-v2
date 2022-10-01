@@ -1,5 +1,3 @@
-import Markdown from 'react-markdown';
-
 import { getDataForHomepage } from '../../lib/cms';
 import {
   getAboutMeSectionContent,
@@ -7,6 +5,7 @@ import {
   getProjects,
 } from '../../lib/data';
 import { Intro } from '../components/Intro';
+import { Markdown } from '../components/Markdown';
 import { Projects } from '../components/Projects';
 import { Section } from '../components/Section';
 import { HomepageLayout } from '../layouts/HomepageLayout';

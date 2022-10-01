@@ -25,7 +25,7 @@ export const Nav = () => (
       {routes.map(route => (
         <li key={route.name}>
           <Link
-            className="hover:text-cyan-500"
+            className="hover:text-cyan-500 hover:underline transition-all"
             href={route.path}
             {...(route.name === 'Resume' && { target: '_blank' })}
           >
