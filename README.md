@@ -1,8 +1,6 @@
-# saradiercks.com
+# 🌎 GIS portfolio of Sara Diercks
 
-> 🌎 The GIS portfolio of Sara Diercks
-
-Live url: https://saradiercks.com
+Live url: https://saradiercks.vercel.app
 
 Showcasing projects from UCLA Extension's GIS and Geospatial Technology certificate program. Built using Next.js and powered by Hygraph CMS.
 

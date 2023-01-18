@@ -34,6 +34,5 @@ export const Meta = () => (
       name="description"
       content="Portfolio of Sara Diercks, showcasing projects from UCLA Extension's GIS and Geospatial Technology certificate program."
     />
-    <link rel="canonical" href="https://saradiercks.com" />
   </Head>
 );
