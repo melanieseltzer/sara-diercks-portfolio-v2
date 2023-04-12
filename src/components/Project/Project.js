@@ -22,8 +22,7 @@ export const Project = ({ project }) => {
           <div className="overflow-hidden rounded-md hover:scale-105 transition-all">
             <Image
               src={project.thumbnail.url}
-              alt=""
-              layout="responsive"
+              alt={project.title}
               width={project.thumbnail.width}
               height={project.thumbnail.height}
             />
