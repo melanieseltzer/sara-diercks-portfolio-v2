@@ -9,7 +9,8 @@ export const HygraphImage = ({ handle, alt }) => (
     loader={hygraphImageLoader}
     alt={alt}
     className="object-cover"
-    sizes="(min-width: 768px) 25vw,
+    sizes="(min-width: 1024px) 20vw,
+    (min-width: 640px) 50w,
     100vw"
   />
 );

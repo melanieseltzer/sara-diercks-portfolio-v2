@@ -19,7 +19,7 @@ export const Project = ({ project }) => {
         rel="noopener noreferrer"
       >
         {project.thumbnail && (
-          <div className="relative w-full h-80 md:h-60 overflow-hidden rounded-md hover:scale-105 transition-all">
+          <div className="relative w-full h-40 min-[425px]:h-60 sm:h-40 md:h-52 lg:h-40 overflow-hidden rounded-md hover:scale-105 transition-all">
             <HygraphImage
               handle={project.thumbnail.handle}
               alt={project.title}

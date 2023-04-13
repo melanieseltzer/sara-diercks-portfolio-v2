@@ -2,7 +2,7 @@
 module.exports = {
   images: {
     domains: ['media.graphassets.com'],
-    deviceSizes: [768],
+    deviceSizes: [640],
     imageSizes: [384, 476],
   },
 };
