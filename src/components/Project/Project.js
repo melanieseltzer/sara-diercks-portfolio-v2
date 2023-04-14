@@ -1,4 +1,5 @@
 import { BsFileEarmarkPdfFill as PdfIcon } from 'react-icons/bs';
+import { HiOutlineDocumentDownload as ExternalLinkIcon } from 'react-icons/hi';
 import prettyBytes from 'pretty-bytes';
 
 import { HygraphImage } from '../HygraphImage';
@@ -12,35 +13,38 @@ export const Project = ({ project, lcpPriority }) => {
 
   return (
     <div>
-      <a
-        className="hover:text-cyan-500 hover:underline"
-        href={projectLink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {project.thumbnail && (
-          <div className="relative w-full h-40 min-[425px]:h-60 sm:h-40 md:h-52 lg:h-40 overflow-hidden rounded-md hover:scale-105 transition-all">
-            <HygraphImage
-              priority={lcpPriority}
-              handle={project.thumbnail.handle}
-              alt={project.title}
-            />
-          </div>
-        )}
-
-        <h3 className="mt-5 text-xl font-medium">
-          {project.title}
-          {project.finalProject && <Tag className="ml-2">Final Project</Tag>}
-        </h3>
-      </a>
-
-      {project.projectPdf && (
-        <div className="mt-2 flex items-center space-x-1">
-          <span>PDF: {prettyBytes(project.projectPdf.size)}</span>
-
-          <PdfIcon className="text-red-500" />
+      {project.thumbnail && (
+        <div className="relative w-full h-40 min-[425px]:h-60 sm:h-40 md:h-52 lg:h-40 overflow-hidden rounded-md">
+          <HygraphImage
+            priority={lcpPriority}
+            handle={project.thumbnail.handle}
+            alt={`Project thumbnail for ${project.title}`}
+          />
         </div>
       )}
+
+      <h3 className="mt-5 text-xl font-medium">
+        <a
+          className="hover:underline"
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {project.title}{' '}
+          <ExternalLinkIcon aria-hidden="true" className="inline" />
+        </a>
+      </h3>
+
+      <div className="mt-2 flex items-center gap-2">
+        {project.finalProject && <Tag>Final Project</Tag>}
+
+        {project.projectPdf && (
+          <div className="flex items-center space-x-1">
+            <span>{prettyBytes(project.projectPdf.size)}</span>
+            <PdfIcon aria-hidden="true" className="text-red-500" />
+          </div>
+        )}
+      </div>
 
       <Markdown className="my-4">{project.shortDescription}</Markdown>
     </div>
