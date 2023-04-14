@@ -1,0 +1,1 @@
+export { HygraphImage } from './HygraphImage';
