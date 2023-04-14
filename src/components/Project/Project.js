@@ -12,7 +12,7 @@ export const Project = ({ project, lcpPriority }) => {
     : project.externalLinkUrl;
 
   return (
-    <div>
+    <article>
       {project.thumbnail && (
         <div className="relative w-full h-40 min-[425px]:h-60 sm:h-40 md:h-52 lg:h-40 overflow-hidden rounded-md">
           <HygraphImage
@@ -47,6 +47,6 @@ export const Project = ({ project, lcpPriority }) => {
       </div>
 
       <Markdown className="my-4">{project.shortDescription}</Markdown>
-    </div>
+    </article>
   );
 };
