@@ -5,7 +5,7 @@ import { HygraphImage } from '../HygraphImage';
 import { Markdown } from '../Markdown';
 import { Tag } from '../Tag';
 
-export const Project = ({ project }) => {
+export const Project = ({ project, lcpPriority }) => {
   const projectLink = project.projectPdf
     ? project.projectPdf.url
     : project.externalLinkUrl;
@@ -21,6 +21,7 @@ export const Project = ({ project }) => {
         {project.thumbnail && (
           <div className="relative w-full h-40 min-[425px]:h-60 sm:h-40 md:h-52 lg:h-40 overflow-hidden rounded-md hover:scale-105 transition-all">
             <HygraphImage
+              priority={lcpPriority}
               handle={project.thumbnail.handle}
               alt={project.title}
             />

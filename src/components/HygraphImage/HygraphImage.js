@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import { hygraphImageLoader } from './loader';
 
-export const HygraphImage = ({ handle, alt }) => {
+export const HygraphImage = ({ handle, alt, priority }) => {
   const [isLoading, setLoading] = React.useState(true);
 
   return (
@@ -11,6 +11,7 @@ export const HygraphImage = ({ handle, alt }) => {
       fill
       src={handle}
       loader={hygraphImageLoader}
+      priority={priority}
       alt={alt}
       className={`object-cover duration-700 ease-in-out ${
         isLoading
