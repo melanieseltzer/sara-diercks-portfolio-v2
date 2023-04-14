@@ -3,7 +3,7 @@ import { MaxWidthContainer } from '../MaxWidthContainer';
 import { TextHighlight } from '../TextHighlight';
 
 export const Intro = () => (
-  <section className="py-4 xl:py-20 shadow-sm">
+  <section className="py-4 xl:py-20 shadow-sm" aria-label="Hero intro">
     <MaxWidthContainer className="text-center">
       <Logo size={60} className="mx-auto mb-4 sm:hidden sm:m-0" />
 
